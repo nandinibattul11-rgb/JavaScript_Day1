@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS7</title>
+</head>
+<body>
+</body>
+<script>
+     function con_Fah(celsius) {
+        return (celsius * 9 / 5) + 32;
+      }
+     function con_cel(fah) {
+        return (fah - 32) * 5 / 32;
+      }
+      console.log(con_cel(45));
+
+     function convertTemperature(degrees, unit) {
+        if (unit === 'C') {
+          const result = con_Fah(degrees);
+          return `${result}F`;
+        } else if (unit === 'F') {
+          const result = con_cel(degrees);
+          return `${result}C`;
+        }
+      }
+
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+</script>
+</html>
